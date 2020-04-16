@@ -11,7 +11,7 @@
 ## 使用说明
 
 - 项目中king-kubectl.sh 文件中有下载kubectl 二进制文件的命令，如果不能下载或者下载慢，**强烈建议**提前下载好，放到自己的Web服务上面，并替换如下命令。
->```
+>```bash
 >curl -LO https://storage.googleapis.com/kubernetes-release/release/$KUBECTL_VERSION/bin/linux/amd64/kubectl
 >```
 - $KUBECTL_VERSION 此环境变量是根据Kubernetes集群版本自动创建的
