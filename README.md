@@ -2,8 +2,6 @@
 
 在平台页面直接使用Kubectl命令行工具管理Kubernetes集群
 
-#### 截屏
-
 ![image](screenshots/kubectl.gif)
 
 ## 依赖
