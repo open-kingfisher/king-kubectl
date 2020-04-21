@@ -16,6 +16,7 @@
 >```
 - $KUBECTL_VERSION 此环境变量是根据Kubernetes集群版本自动创建的
 - 项目中kubectl目录里面有部分kubectl二进制文件，将不定期更新
+- [https://github.com/kubernetes/kubectl/releases](https://github.com/kubernetes/kubectl/releases)
 
 ## Makefile的使用
 
