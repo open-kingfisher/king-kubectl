@@ -1,13 +1,14 @@
 package main
 
 import (
-	"kingfisher/kf/common/log"
+	"github.com/open-kingfisher/king-utils/common/log"
 	"net/http"
 )
 
 func main() {
 	http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("king kubectl ok"))
+		_, err := w.Write([]byte("king kubectl ok"))
+		log.Error("w.Write error:", err)
 	})
 	log.Info("Starting king kubectl ...")
 	log.Fatal(http.ListenAndServe(":9090", nil))
