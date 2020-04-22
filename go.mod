@@ -1,7 +1,9 @@
-module kingfisher/king-kubectl
+module open-kingfisher/king-kubectl
 
 go 1.14
 
-require kingfisher/kf v0.0.0-00010101000000-000000000000
-
-replace kingfisher/kf => ../kf
+require (
+	github.com/gin-gonic/gin v1.6.2 // indirect
+	github.com/open-kingfisher/king-utils v0.0.0-20200422040653-3bc1221961c1
+	go.uber.org/zap v1.14.1 // indirect
+)
