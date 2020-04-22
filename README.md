@@ -1,6 +1,7 @@
 # Kingfisher Kubectl
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Go Report Card](https://goreportcard.com/badge/github.com/open-kingfisher/king-kubectl)](https://goreportcard.com/report/github.com/open-kingfisher/king-kubectl)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3909/badge)](https://bestpractices.coreinfrastructure.org/projects/3909)
 
 在平台页面直接使用Kubectl命令行工具管理Kubernetes集群
 
