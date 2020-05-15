@@ -27,3 +27,5 @@
 - 编译成二进制文件： make build
 - 生成镜像推送到镜像仓库： make push
 
+## 联系我们
+- [交流群](https://github.com/open-kingfisher/community/blob/master/contact_us/README.md)
