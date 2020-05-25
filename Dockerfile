@@ -1,3 +1,8 @@
+FROM golang:1.14.3 as builder
+ARG PROJECT_NAME="king-kubectl"
+ARG GIT_URL="https://github.com/open-kingfisher/$PROJECT_NAME.git"
+RUN git clone $GIT_URL /$PROJECT_NAME && cd /$PROJECT_NAME && make  
+
 FROM alpine:3.10
 
 ENV TIME_ZONE Asia/Shanghai
@@ -8,7 +13,7 @@ RUN set -xe \
     && ln -sf /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime \
     && mkdir /lib64 \
     && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
-ADD bin/king-kubectl /usr/local/bin
-ADD king-kubectl.sh /opt
+COPY --from=builder /king-inspect/entrypoint.sh /entrypoint.sh
+COPY --from=builder /king-inspect/bin/king-kubectl /usr/local/bin
 
-CMD /usr/local/bin/king-kubectl
+ENTRYPOINT ["/bin/sh","/entrypoint.sh"]
